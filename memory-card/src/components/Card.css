@@ -5,8 +5,19 @@
   background: linear-gradient( rgb(255, 179, 102), rgb(10,20,30));
   border-radius: 10px;
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  text-align: center;
+  flex-direction: column;
+  
+  
 }
+  .CardProperties
+  {
+    display: flex;
+    flex-direction: row;
+    width: 150px;
+    justify-content: space-between;
+  }
+    .CardsLife, .CardsAttack
+    {
+      padding: 5px;
+    }
 

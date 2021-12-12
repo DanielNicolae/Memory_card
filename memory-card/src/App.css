@@ -15,11 +15,13 @@ html
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.App
-{
-  text-align: center;
-}
-  header{}
+
+  header
+  {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
     .Title
     {
       font-size: 3em;
@@ -32,4 +34,8 @@ html
     text-align: center;
   }
 
-  footer{}
+  footer{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }

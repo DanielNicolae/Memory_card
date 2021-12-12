@@ -1,27 +1,41 @@
 import React, { useState, useEffect } from "react";
 import "./Card.css";
 
-export default function Card(enemyAttack, effect, cardImage, imageDesc) {
-  const [life, setLife] = useState(10);
-  const [attack, setAttack] = useState(5);
+export default function Card(props) {
+  const [life, setLife] = useState(props.cardLife);
+  const [attack, setAttack] = useState(props.cardAttack);
 
   useEffect(() => {
-    const setLifeAfterReceiveingDamage = () => {
-      setLife(life = life - enemyAttack);
+    const setLifeAfterReceivingDamage = () => {
+      setLife(life - props.enemyAttack);
     }
     const setAttackAfterEffect = () => {
-      setAttack(attack = attack + effect);
+      setAttack(attack + props.effect);
     }
+    document.addEventListener("click", setLifeAfterReceivingDamage);
+    document.addEventListener("click", setAttackAfterEffect);
+    return () => {
+      document.removeEventListener("click", setAttackAfterEffect);
+      document.removeEventListener("click", setLifeAfterReceivingDamage);
+    };
   }, [life, attack]);
 
   return (
     <div className="CardContainer">
       <div className="CardProperties">
-        <div className="CardsLife"></div>
-        <div className="CardsAttack"></div>
+        <div className="CardsLife">
+          <div>Life</div>
+          {life}
+        </div>
+        <div className="CardsAttack">
+          <div>Attack</div>
+          {attack}
+        </div>
       </div>
-      <div className="CardName"></div>
-      <img src={cardImage} alt={imageDesc} />
+      <div className="CardName">
+        {props.cardName}
+      </div>
+      <img src={props.cardImage} alt={props.imageDesc} />
     </div>
   );
 }
