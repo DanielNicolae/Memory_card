@@ -6,7 +6,9 @@ function App() {
   return (
     <div className="App">
       <header>
-
+        <div className='Title'>
+          Card game
+        </div>
       </header>
       <body>
         <Card />

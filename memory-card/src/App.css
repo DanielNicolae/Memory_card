@@ -7,4 +7,24 @@
   outline: 0;
 }
 
+html
+{
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgb(8, 0, 44));
+  font-family: Arial, Helvetica, sans-serif;
+}
 
+.App
+{
+  text-align: center;
+}
+  header{}
+    .Title
+    {
+      font-size: 3em;
+      margin: 1em;
+    }
+  body{}
+  
+  footer{}
