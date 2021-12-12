@@ -25,6 +25,11 @@ html
       font-size: 3em;
       margin: 1em;
     }
-  body{}
-  
+  body
+  {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+
   footer{}
