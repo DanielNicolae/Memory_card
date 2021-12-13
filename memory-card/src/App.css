@@ -33,6 +33,17 @@ html
     justify-content: center;
     text-align: center;
   }
+    .Table
+    {
+      display: flex;
+      flex-direction: row;
+    }
+    .MyCards
+    {
+      display: flex;
+      flex-direction: row;
+    }
+      
 
   footer{
     display: flex;

@@ -6,11 +6,15 @@ export default function Card(props) {
   const [attack, setAttack] = useState(props.cardAttack);
 
   useEffect(() => {
-    const setLifeAfterReceivingDamage = () => {
-      setLife(life - props.enemyAttack);
+    const setLifeAfterReceivingDamage = (e) => {
+      if (e.target.className === "CardContainer") {
+        setLife(life - props.enemyAttack);
+      }
     }
-    const setAttackAfterEffect = () => {
-      setAttack(attack + props.effect);
+    const setAttackAfterEffect = (e) => {
+      if (e.target.className === "CardContainer") {
+        setAttack(attack + props.effect);
+      }
     }
     document.addEventListener("click", setLifeAfterReceivingDamage);
     document.addEventListener("click", setAttackAfterEffect);
@@ -18,7 +22,7 @@ export default function Card(props) {
       document.removeEventListener("click", setAttackAfterEffect);
       document.removeEventListener("click", setLifeAfterReceivingDamage);
     };
-  }, [life, attack]);
+  }, [life, attack, props.effect, props.enemyAttack]);
 
   return (
     <div className="CardContainer">
