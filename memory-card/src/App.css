@@ -33,28 +33,29 @@ html
     justify-content: center;
     text-align: center;
   }
+    .OpponetsCards, .MyCards
+    {
+      display: flex;
+      flex-direction: row;
+    }
     .Table
     {
       border-radius: 10px;
-      background: rgba(0, 0, 0, 0.1);
-      
+      background: linear-gradient(-45deg, rgba(15, 15, 15, 0.5), rgba(187, 239, 255, 0.4));
+      box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.2),
+                  inset 7px 7px 6px rgba(255, 255, 255, 0.2),
+                  inset -7px -7px 6px rgba(0, 0, 0, 0.2);
+      height: 50vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
       .OpponentsCardsOnTable, .MyCardsOnTable
       {
         display: flex;
         flex-direction: row;
       }
-      .OpponentsCardsOnTable
-      {
-        margin-bottom: 2vh;
-      }
-      .MyCards
-      {
-        display: flex;
-        flex-direction: row;
-      }
       
-
   footer{
     display: flex;
     justify-content: center;
