@@ -7,7 +7,7 @@ function App() {
 
   useEffect(() => {
     const insertCardOnTable = (e) => {
-      const table = document.getElementsByClassName("Table")[0];
+      const table = document.getElementsByClassName("MyCardsOnTable")[0];
       if (e.target.className === "CardContainer") {
         table.appendChild(e.target);
       }
@@ -24,12 +24,13 @@ function App() {
     <React.Fragment>
       <header>
         <div className="Title">
-          Card game
+          Ducks vs trucks
         </div>
       </header>
       <main>
         <div className='Table'>
-
+          <div className='OpponentsCardsOnTable'></div>
+          <div className='MyCardsOnTable'></div>
         </div>
         <div className='MyCards'>
           <Card

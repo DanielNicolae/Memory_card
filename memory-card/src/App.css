@@ -35,14 +35,24 @@ html
   }
     .Table
     {
-      display: flex;
-      flex-direction: row;
+      border-radius: 10px;
+      background: rgba(0, 0, 0, 0.1);
+      
     }
-    .MyCards
-    {
-      display: flex;
-      flex-direction: row;
-    }
+      .OpponentsCardsOnTable, .MyCardsOnTable
+      {
+        display: flex;
+        flex-direction: row;
+      }
+      .OpponentsCardsOnTable
+      {
+        margin-bottom: 2vh;
+      }
+      .MyCards
+      {
+        display: flex;
+        flex-direction: row;
+      }
       
 
   footer{
