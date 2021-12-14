@@ -11,7 +11,12 @@ function App() {
       const opponentsTable = document.getElementsByClassName("OpponentsCardsOnTable")[0];
       const opponentsCards = document.getElementsByClassName("OpponetsCards")[0].children;
       const randomCardNum = Math.floor(Math.random() * opponentsCards.length);
-      if (e.target.className === "CardContainer") {
+
+      if (e.target.className === "CardContainer" ||
+        e.target.className === "CardProperties" ||
+        e.target.className === "CardsLife" ||
+        e.target.className === "CardsAttack" ||
+        e.target.className === "CardName") {
         myTable.appendChild(e.target);
         opponentsTable.appendChild(opponentsCards[randomCardNum]);
       }

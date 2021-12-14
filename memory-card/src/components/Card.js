@@ -7,12 +7,20 @@ export default function Card(props) {
 
   useEffect(() => {
     const setLifeAfterReceivingDamage = (e) => {
-      if (e.target.className === "CardContainer") {
+      if (e.target.className === "CardContainer" ||
+        e.target.className === "CardProperties" ||
+        e.target.className === "CardsLife" ||
+        e.target.className === "CardsAttack" ||
+        e.target.className === "CardName") {
         setLife(life - props.enemyAttack);
       }
     }
     const setAttackAfterEffect = (e) => {
-      if (e.target.className === "CardContainer") {
+      if (e.target.className === "CardContainer" ||
+        e.target.className === "CardProperties" ||
+        e.target.className === "CardsLife" ||
+        e.target.className === "CardsAttack" ||
+        e.target.className === "CardName") {
         setAttack(attack + props.effect);
       }
     }
