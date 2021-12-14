@@ -33,11 +33,15 @@ html
     justify-content: center;
     text-align: center;
   }
-    .OpponetsCards, .MyCards
+    .OpponentsCards, .MyCards
     {
       display: flex;
       flex-direction: row;
     }
+      .MyCard, .OpponentsCard
+      {
+        /* background: green; */
+      }
     .Table
     {
       border-radius: 10px;
@@ -55,6 +59,7 @@ html
         display: flex;
         flex-direction: row;
       }
+    
       
   footer{
     display: flex;
