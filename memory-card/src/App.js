@@ -7,9 +7,13 @@ function App() {
 
   useEffect(() => {
     const insertCardOnTable = (e) => {
-      const table = document.getElementsByClassName("MyCardsOnTable")[0];
+      const myTable = document.getElementsByClassName("MyCardsOnTable")[0];
+      const opponentsTable = document.getElementsByClassName("OpponentsCardsOnTable")[0];
+      const opponentsCards = document.getElementsByClassName("OpponetsCards")[0].children;
+      const randomCardNum = Math.floor(Math.random() * opponentsCards.length);
       if (e.target.className === "CardContainer") {
-        table.appendChild(e.target);
+        myTable.appendChild(e.target);
+        opponentsTable.appendChild(opponentsCards[randomCardNum]);
       }
 
     };
