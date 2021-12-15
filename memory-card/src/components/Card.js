@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import "./Card.css";
 
 export default function Card(props) {
@@ -19,6 +19,7 @@ export default function Card(props) {
         {props.cardName}
       </div>
       <img src={props.cardImage} alt={props.imageDesc} />
+      <div className={`CardMask ${props.id}`}></div>
     </div>
   );
 }

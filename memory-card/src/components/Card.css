@@ -20,4 +20,10 @@
     {
       padding: 5px;
     }
-
+  .CardMask
+  {
+    width: 150px;
+    height: 200px;
+    border-radius: 10px;
+    transform:translateY(-100px);
+  }
