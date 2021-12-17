@@ -25,6 +25,28 @@ function App() {
     life: 2,
     attack: 1
   });
+  const [opponetsCard1, setOpponentsCard1] = useState({
+    life: 8,
+    attack: 2
+  });
+  const [opponentsCard2, setOpponentsCard2] = useState({
+    life: 7,
+    attack: 6
+  });
+  const [opponentsCard3, setOpponentsCard3] = useState({
+    life: 8,
+    attack: 5
+  });
+  const [opponentsCard4, setOpponentsCard4] = useState({
+    life: 4,
+    attack: 1
+  });
+  const [opponentsCard5, setOpponentsCard5] = useState({
+    life: 5,
+    attack: 2
+  });
+  const [myScore, setMyScore] = useState(0);
+  const [opponentsScore, setOpponentsScore] = useState(0);
 
   useEffect(() => {
     const myTable = document.getElementsByClassName("MyCardsOnTable")[0];
@@ -37,8 +59,9 @@ function App() {
       setOpponentsAttack(getOpponentsAttack);
       console.log(`OpponentsAttack=${getOpponentsAttack}`);
       const getOpponentsLife = opponentsCards[randomCardNum].parentNode.firstChild.firstChild.children[0].textContent.split('')[4];
+      const getOpponentsCardClassId = opponentsCards[randomCardNum].lastChild.className;
 
-      function setMyCard(cardClass, setMyCardNum) {
+      function setCard(cardClass, setCardNum) {
         if (e.target.className === cardClass) {
           const getMyAttack = e.target.parentNode.firstChild.children[1].textContent.split('')[6];
           setMyAttack(getMyAttack);
@@ -46,21 +69,48 @@ function App() {
           const getMyLife = e.target.parentNode.firstChild.children[0].textContent.split('')[4];
           const parent = e.target.parentNode.parentNode.className;
           console.log(`Card's parent: ${parent}`);
+          const myNewLife = getMyLife - getOpponentsAttack;
           if (parent === "MyCards") {
-            setMyCardNum(prevState => ({
+            setCardNum(prevState => ({
               ...prevState,
-              life: getMyLife - getOpponentsAttack
+              life: myNewLife
             }));
           }
+          setScore(myScore, myNewLife, setMyScore);
           myTable.appendChild(e.target.parentNode);
           opponentsTable.appendChild(opponentsCards[randomCardNum]);
+
+          const newOpponentsLife = getOpponentsLife - getMyAttack;
+          function setOpponentsCard(setCardNr) {
+            const opponentsNewLife = getOpponentsLife - getMyAttack;
+            setCardNr(prev => ({
+              ...prev,
+              life: opponentsNewLife
+            }));
+            setScore(opponentsScore, opponentsNewLife, setOpponentsScore);
+          }
+          if (getOpponentsCardClassId === "CardMask OpponentsCard1") {
+            setOpponentsCard(setOpponentsCard1);
+          } else if (getOpponentsCardClassId === "CardMask OpponentsCard2") {
+            setOpponentsCard(setOpponentsCard2);
+          } else if (getOpponentsCardClassId === "CardMask OpponentsCard3") {
+            setOpponentsCard(setOpponentsCard3);
+          } else if (getOpponentsCardClassId === "CardMask OpponentsCard4") {
+            setOpponentsCard(setOpponentsCard4);
+          } else if (getOpponentsCardClassId === "CardMask OpponentsCard5") {
+            setOpponentsCard(setOpponentsCard5);
+          }
         }
       }
-      setMyCard("CardMask MyCard1", setMyCard1);
-      setMyCard("CardMask MyCard2", setMyCard2);
-      setMyCard("CardMask MyCard3", setMyCard3);
-      setMyCard("CardMask MyCard4", setMyCard4);
-      setMyCard("CardMask MyCard5", setMyCard5);
+
+      function setScore(prevScore, playersLife, setPlayersScore) {
+        setPlayersScore(prevScore + playersLife);
+      }
+      setCard("CardMask MyCard1", setCard1);
+      setCard("CardMask MyCard2", setCard2);
+      setCard("CardMask MyCard3", setCard3);
+      setCard("CardMask MyCard4", setCard4);
+      setCard("CardMask MyCard5", setCard5);
     };
     document.addEventListener("click", insertCardOnTable);
 
@@ -72,9 +122,7 @@ function App() {
   return (
     <React.Fragment>
       <header>
-        <div className="Title">
-          Ducks vs trucks
-        </div>
+
       </header>
       <main>
         <div className='OpponentsCards'>
@@ -130,8 +178,21 @@ function App() {
           />
         </div>
         <div className='Table'>
-          <div className='OpponentsCardsOnTable'></div>
-          <div className='MyCardsOnTable'></div>
+          <div className='CardsOnTable'>
+            <div className='OpponentsCardsOnTable'></div>
+            <div className='MyCardsOnTable'></div>
+          </div>
+          <div className='ScoreArea'>
+            <div className='Score'>
+              Score
+            </div>
+            <div className='OpponentsScore'>
+              {opponentsScore}
+            </div>
+            <div className='MyScore'>
+              {myScore}
+            </div>
+          </div>
         </div>
         <div className='MyCards'>
           <Card
