@@ -303,7 +303,7 @@ function App() {
             enemyAttack={opponentsAttack}
             effect={0}
             cardImage={"./images/trucks/truck1.webp"}
-            imageDesc={"Picture of a truck"}
+            imageDesc={"Picture of truck 1"}
             id={"OpponentsCard1"}
           />
           <Card
@@ -312,7 +312,7 @@ function App() {
             enemyAttack={opponentsAttack}
             effect={0}
             cardImage={"./images/trucks/truck2.webp"}
-            imageDesc={"Picture of a truck"}
+            imageDesc={"Picture of truck 2"}
             id={"OpponentsCard2"}
           />
           <Card
@@ -321,7 +321,7 @@ function App() {
             enemyAttack={opponentsAttack}
             effect={0}
             cardImage={"./images/trucks/truck3.webp"}
-            imageDesc={"Picture of a truck"}
+            imageDesc={"Picture of truck 3"}
             id={"OpponentsCard3"}
           />
           <Card
@@ -330,7 +330,7 @@ function App() {
             enemyAttack={opponentsAttack}
             effect={0}
             cardImage={"./images/trucks/truck4.webp"}
-            imageDesc={"Picture of a truck"}
+            imageDesc={"Picture of truck 4"}
             id={"OpponentsCard4"}
           />
           <Card
@@ -339,7 +339,7 @@ function App() {
             enemyAttack={opponentsAttack}
             effect={0}
             cardImage={"./images/trucks/truck5.webp"}
-            imageDesc={"Picture of a truck"}
+            imageDesc={"Picture of truck 5"}
             id={"OpponentsCard5"}
           />
         </div>
@@ -364,7 +364,7 @@ function App() {
             enemyAttack={opponentsAttack}
             effect={0}
             cardImage={"./images/ducks/duck1.webp"}
-            imageDesc={"Picture of a duck"}
+            imageDesc={"Picture of duck 1"}
             id={"MyCard1"}
           />
           <Card
@@ -373,7 +373,7 @@ function App() {
             enemyAttack={opponentsAttack}
             effect={0}
             cardImage={"./images/ducks/duck2.webp"}
-            imageDesc={"Picture of a duck"}
+            imageDesc={"Picture of duck 2"}
             id={"MyCard2"}
           />
           <Card
@@ -382,7 +382,7 @@ function App() {
             enemyAttack={opponentsAttack}
             effect={0}
             cardImage={"./images/ducks/duck3.webp"}
-            imageDesc={"Picture of a duck"}
+            imageDesc={"Picture of duck 3"}
             id={"MyCard3"}
           />
           <Card
@@ -391,7 +391,7 @@ function App() {
             enemyAttack={opponentsAttack}
             effect={0}
             cardImage={"./images/ducks/duck4.webp"}
-            imageDesc={"Picture of a duck"}
+            imageDesc={"Picture of duck 4"}
             id={"MyCard4"}
           />
           <Card
@@ -400,7 +400,7 @@ function App() {
             enemyAttack={opponentsAttack}
             effect={0}
             cardImage={"./images/ducks/duck5.webp"}
-            imageDesc={"Picture of a duck"}
+            imageDesc={"Picture of duck 5"}
             id={"MyCard5"}
           />
         </div>
