@@ -33,7 +33,26 @@
     border-radius:1vh;
     align-self: center;
   }
-
+  
+@media screen and (min-width: 360px)
+{
+  .CardContainer
+  {
+    width: 60px;
+    height: 90px;
+    font-size: 0.6em;
+  }
+    .CardProperties
+    {
+      width: 60px;
+      height: 80px;
+    }
+    .Image
+    {
+      width: 58px;
+      height: 50px;
+    }
+}
 @media screen and (min-width: 370px)
 {
   .CardContainer
@@ -127,12 +146,31 @@
       height: 90px;
     }
 }
-@media screen and (min-width: 700px)
+@media screen and (min-width: 640px)
+{
+  .CardContainer
+  {
+    width: 110px;
+    height: 150px;
+
+  }
+    .CardProperties
+    {
+      width: 110px;
+      height: 150px;
+    }
+    .Image
+    {
+      width: 108px;
+      height: 110px;
+    }
+}
+@media screen and (min-width: 730px)
 { 
   .CardContainer
   {
     width: 120px;
-    height: 180px;
+    height: 165px;
     font-size: 1em;
   }
   .CardContainer:hover
@@ -143,7 +181,7 @@
     .CardProperties
     {
       width: 120px;
-      height: 180px;
+      height: 165px;
     }
     .Image
     {
@@ -158,11 +196,6 @@
     width: 130px;
     height: 190px;
   }
-  .CardContainer:hover
-  {
-    transform: translateY(-20px);
-    box-shadow: 5px 5px 5px black;
-  }
     .CardProperties
     {
       width: 130px;
@@ -172,97 +205,5 @@
     {
       width: 128px;
       height: 140px;
-    }
-}
-@media screen and (min-width: 840px)
-{ 
-  .CardContainer
-  {
-    width: 140px;
-    height: 200px;
-  }
-  .CardContainer:hover
-  {
-    transform: translateY(-20px);
-    box-shadow: 5px 5px 5px black;
-  }
-    .CardProperties
-    {
-      width: 140px;
-      height: 200px;
-    }
-    .Image
-    {
-      width: 138px;
-      height: 150px;
-    }
-}
-@media screen and (min-width: 900px)
-{ 
-  .CardContainer
-  {
-    width: 150px;
-    height: 210px;
-  }
-  .CardContainer:hover
-  {
-    transform: translateY(-20px);
-    box-shadow: 5px 5px 5px black;
-  }
-    .CardProperties
-    {
-      width: 150px;
-      height: 210px;
-    }
-    .Image
-    {
-      width: 148px;
-      height: 160px;
-    }
-}
-@media screen and (min-width: 950px)
-{ 
-  .CardContainer
-  {
-    width: 160px;
-    height: 220px;
-  }
-  .CardContainer:hover
-  {
-    transform: translateY(-20px);
-    box-shadow: 5px 5px 5px black;
-  }
-    .CardProperties
-    {
-      width: 160px;
-      height: 220px;
-    }
-    .Image
-    {
-      width: 158px;
-      height: 170px;
-    }
-}
-@media screen and (min-width: 1000px)
-{ 
-  .CardContainer
-  {
-    width: 170px;
-    height: 230px;
-  }
-  .CardContainer:hover
-  {
-    transform: translateY(-20px);
-    box-shadow: 5px 5px 5px black;
-  }
-    .CardProperties
-    {
-      width: 170px;
-      height: 230px;
-    }
-    .Image
-    {
-      width: 168px;
-      height: 180px;
     }
 }
