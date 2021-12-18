@@ -302,7 +302,7 @@ function App() {
             cardAttack={opponentsCard1.attack}
             enemyAttack={opponentsAttack}
             effect={0}
-            cardImage={"./images/trucks/548382394_m.webp"}
+            cardImage={"./images/trucks/truck1.webp"}
             imageDesc={"Picture of a truck"}
             id={"OpponentsCard1"}
           />
@@ -311,7 +311,7 @@ function App() {
             cardAttack={opponentsCard2.attack}
             enemyAttack={opponentsAttack}
             effect={0}
-            cardImage={"./images/trucks/548303709_m.webp"}
+            cardImage={"./images/trucks/truck2.webp"}
             imageDesc={"Picture of a truck"}
             id={"OpponentsCard2"}
           />
@@ -320,7 +320,7 @@ function App() {
             cardAttack={opponentsCard3.attack}
             enemyAttack={opponentsAttack}
             effect={0}
-            cardImage={"./images/trucks/548848121_m.webp"}
+            cardImage={"./images/trucks/truck3.webp"}
             imageDesc={"Picture of a truck"}
             id={"OpponentsCard3"}
           />
@@ -329,7 +329,7 @@ function App() {
             cardAttack={opponentsCard4.attack}
             enemyAttack={opponentsAttack}
             effect={0}
-            cardImage={"./images/trucks/pexels-pixabay-272374.webp"}
+            cardImage={"./images/trucks/truck4.webp"}
             imageDesc={"Picture of a truck"}
             id={"OpponentsCard4"}
           />
@@ -338,7 +338,7 @@ function App() {
             cardAttack={opponentsCard5.attack}
             enemyAttack={opponentsAttack}
             effect={0}
-            cardImage={"./images/trucks/548635934_m.webp"}
+            cardImage={"./images/trucks/truck5.webp"}
             imageDesc={"Picture of a truck"}
             id={"OpponentsCard5"}
           />
@@ -363,7 +363,7 @@ function App() {
             cardAttack={myCard1.attack}
             enemyAttack={opponentsAttack}
             effect={0}
-            cardImage={"./images/ducks/pexels-boys-in-bristol-photography-7624356.webp"}
+            cardImage={"./images/ducks/duck1.webp"}
             imageDesc={"Picture of a duck"}
             id={"MyCard1"}
           />
@@ -372,7 +372,7 @@ function App() {
             cardAttack={myCard2.attack}
             enemyAttack={opponentsAttack}
             effect={0}
-            cardImage={"./images/ducks/pexels-felipe-borges-3757747.webp"}
+            cardImage={"./images/ducks/duck2.webp"}
             imageDesc={"Picture of a duck"}
             id={"MyCard2"}
           />
@@ -381,7 +381,7 @@ function App() {
             cardAttack={myCard3.attack}
             enemyAttack={opponentsAttack}
             effect={0}
-            cardImage={"./images/ducks/pexels-m-winkeltier-7731779.webp"}
+            cardImage={"./images/ducks/duck3.webp"}
             imageDesc={"Picture of a duck"}
             id={"MyCard3"}
           />
@@ -390,7 +390,7 @@ function App() {
             cardAttack={myCard4.attack}
             enemyAttack={opponentsAttack}
             effect={0}
-            cardImage={"./images/ducks/pexels-maurice-engelen-7308307.webp"}
+            cardImage={"./images/ducks/duck4.webp"}
             imageDesc={"Picture of a duck"}
             id={"MyCard4"}
           />
@@ -399,7 +399,7 @@ function App() {
             cardAttack={myCard5.attack}
             enemyAttack={opponentsAttack}
             effect={0}
-            cardImage={"./images/ducks/pexels-robert-laszlo-7025579.webp"}
+            cardImage={"./images/ducks/duck5.webp"}
             imageDesc={"Picture of a duck"}
             id={"MyCard5"}
           />
