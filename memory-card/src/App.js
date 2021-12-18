@@ -199,7 +199,6 @@ function App() {
             <div className='MyCardsOnTable'></div>
           </div>
           <div className='ScoreArea'>
-
             <div className='OpponentsScore'>
               {opponentsScore}
             </div>
