@@ -3,6 +3,7 @@ import './App.css';
 import Card from "./components/Card";
 
 function App() {
+  const [round, setRound] = useState(0);
   const [opponentsAttack, setOpponentsAttack] = useState(0);
   const [myAttack, setMyAttack] = useState(0);
   const [myCard1, setMyCard1] = useState({
@@ -31,11 +32,11 @@ function App() {
   });
   const [opponentsCard2, setOpponentsCard2] = useState({
     life: 7,
-    attack: 6
+    attack: 3
   });
   const [opponentsCard3, setOpponentsCard3] = useState({
     life: 8,
-    attack: 5
+    attack: 2
   });
   const [opponentsCard4, setOpponentsCard4] = useState({
     life: 4,
@@ -57,7 +58,6 @@ function App() {
       console.log(`nameOfClass: ${nameOfClass}`);
       if (e.target.parentNode.parentNode !== null) {
         if (e.target.parentNode.parentNode.className === "MyCards") {
-          checkForCards();
           const opponentsCards = document.getElementsByClassName("OpponentsCards")[0].children;
           const randomCardNum = Math.floor(Math.random() * opponentsCards.length);
           const getOpponentsAttack = opponentsCards[randomCardNum].parentNode.firstChild.firstChild.children[1].textContent.split('')[6];
@@ -65,8 +65,9 @@ function App() {
           // console.log(`OpponentsAttack=${getOpponentsAttack}`);
           const getOpponentsLife = opponentsCards[randomCardNum].parentNode.firstChild.firstChild.children[0].textContent.split('')[4];
           const getOpponentsCardClassId = opponentsCards[randomCardNum].lastChild.className;
-
+          console.log(`getOpponentsCardClassId ${getOpponentsCardClassId}`);
           function setCard(cardClass1, cardClass2, cardClass3, cardClass4, cardClass5, cardClass6, cardClass7, setCardNum) {
+            setRound(round => round + 1);
             let getMyAttack = 0;
             let getMyLife = 0;
             let parent = "";
@@ -175,7 +176,7 @@ function App() {
                 life: myNewLife
               }));
             }
-            setScore(myScore, myNewLife, setMyScore);
+            setScore(myNewLife, setMyScore);
             myTable.appendChild(e.target.parentNode);
             opponentsTable.appendChild(opponentsCards[randomCardNum]);
 
@@ -188,25 +189,26 @@ function App() {
                 ...prev,
                 life: opponentsNewLife
               }));
-              setScore(opponentsScore, opponentsNewLife, setOpponentsScore);
+              setScore(opponentsNewLife, setOpponentsScore);
             }
-            if (getOpponentsCardClassId === "CardMask OpponentsCard1") {
+            if (getOpponentsCardClassId === "Image OpponentsCard1") {
               setOpponentsCard(setOpponentsCard1);
-            } else if (getOpponentsCardClassId === "CardMask OpponentsCard2") {
+            } else if (getOpponentsCardClassId === "Image OpponentsCard2") {
               setOpponentsCard(setOpponentsCard2);
-            } else if (getOpponentsCardClassId === "CardMask OpponentsCard3") {
+            } else if (getOpponentsCardClassId === "Image OpponentsCard3") {
               setOpponentsCard(setOpponentsCard3);
-            } else if (getOpponentsCardClassId === "CardMask OpponentsCard4") {
+            } else if (getOpponentsCardClassId === "Image OpponentsCard4") {
               setOpponentsCard(setOpponentsCard4);
-            } else if (getOpponentsCardClassId === "CardMask OpponentsCard5") {
+            } else if (getOpponentsCardClassId === "Image OpponentsCard5") {
               setOpponentsCard(setOpponentsCard5);
             }
 
           }
 
-          function setScore(prevScore, playersLife, setPlayersScore) {
-            setPlayersScore(prevScore + playersLife);
+          function setScore(playersLife, setPlayersScore) {
+            setPlayersScore((prevScore) => prevScore + playersLife);
           }
+
           if (nameOfClass === "CardContainer MyCard1" ||
             nameOfClass === "CardProperties MyCard1" ||
             nameOfClass === "CardsLife MyCard1" ||
@@ -265,10 +267,11 @@ function App() {
         }
       }
     };
-
+    console.log(`my score ${myScore}`);
+    console.log(`opponent's score:${opponentsScore}`);
+    checkForCards();
     function checkForCards() {
-      let myCards = document.getElementsByClassName("MyCards")[0].children;
-      if (myCards.length === 1) {
+      if (round === 5) {
         if (myScore > opponentsScore) {
           setWinner("Ducks win!");
         } else if (myScore < opponentsScore) {
