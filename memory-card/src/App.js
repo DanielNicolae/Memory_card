@@ -25,7 +25,7 @@ function App() {
     life: 2,
     attack: 1
   });
-  const [opponetsCard1, setOpponentsCard1] = useState({
+  const [opponentsCard1, setOpponentsCard1] = useState({
     life: 8,
     attack: 2
   });
@@ -47,12 +47,13 @@ function App() {
   });
   const [myScore, setMyScore] = useState(0);
   const [opponentsScore, setOpponentsScore] = useState(0);
-
+  const [winner, setWinner] = useState("");
   useEffect(() => {
     const myTable = document.getElementsByClassName("MyCardsOnTable")[0];
     const opponentsTable = document.getElementsByClassName("OpponentsCardsOnTable")[0];
 
-    const insertCardOnTable = (e) => {
+    function insertCardOnTable(e) {
+      checkForCards();
       const opponentsCards = document.getElementsByClassName("OpponentsCards")[0].children;
       const randomCardNum = Math.floor(Math.random() * opponentsCards.length);
       const getOpponentsAttack = opponentsCards[randomCardNum].parentNode.firstChild.firstChild.children[1].textContent.split('')[6];
@@ -80,9 +81,9 @@ function App() {
           myTable.appendChild(e.target.parentNode);
           opponentsTable.appendChild(opponentsCards[randomCardNum]);
 
-          const newOpponentsLife = getOpponentsLife - getMyAttack;
+
           function setOpponentsCard(setCardNr) {
-            const opponentsNewLife = getOpponentsLife - getMyAttack;
+            const opponentsNewLife = getOpponentsLife - myAttack;
             setCardNr(prev => ({
               ...prev,
               life: opponentsNewLife
@@ -106,12 +107,25 @@ function App() {
       function setScore(prevScore, playersLife, setPlayersScore) {
         setPlayersScore(prevScore + playersLife);
       }
-      setCard("CardMask MyCard1", setCard1);
-      setCard("CardMask MyCard2", setCard2);
-      setCard("CardMask MyCard3", setCard3);
-      setCard("CardMask MyCard4", setCard4);
-      setCard("CardMask MyCard5", setCard5);
+      setCard("CardMask MyCard1", setMyCard1);
+      setCard("CardMask MyCard2", setMyCard2);
+      setCard("CardMask MyCard3", setMyCard3);
+      setCard("CardMask MyCard4", setMyCard4);
+      setCard("CardMask MyCard5", setMyCard5);
     };
+
+    function checkForCards() {
+      const myCards = document.getElementsByClassName("MyCards")[0].children;
+      if (myCards.length === 1) {
+        if (myScore > opponentsScore) {
+          setWinner("Ducks win!");
+        } else if (myScore < opponentsScore) {
+          setWinner("Trucks win!");
+        } else {
+          setWinner("Draw");
+        }
+      }
+    }
     document.addEventListener("click", insertCardOnTable);
 
     return () => {
@@ -122,14 +136,16 @@ function App() {
   return (
     <React.Fragment>
       <header>
-
+        <div className='Winner'>
+          {winner}
+        </div>
       </header>
       <main>
         <div className='OpponentsCards'>
           <Card
-            cardLife={10}
-            cardAttack={5}
-            enemyAttack={myAttack}
+            cardLife={opponentsCard1.life}
+            cardAttack={opponentsCard1.attack}
+            enemyAttack={opponentsAttack}
             effect={0}
             cardName={"Demo card"}
             cardImage={""}
@@ -137,9 +153,9 @@ function App() {
             id={"OpponentsCard1"}
           />
           <Card
-            cardLife={8}
-            cardAttack={4}
-            enemyAttack={myAttack}
+            cardLife={opponentsCard2.life}
+            cardAttack={opponentsCard2.attack}
+            enemyAttack={opponentsAttack}
             effect={0}
             cardName={"Demo card"}
             cardImage={""}
@@ -147,9 +163,9 @@ function App() {
             id={"OpponentsCard2"}
           />
           <Card
-            cardLife={12}
-            cardAttack={5}
-            enemyAttack={myAttack}
+            cardLife={opponentsCard3.life}
+            cardAttack={opponentsCard3.attack}
+            enemyAttack={opponentsAttack}
             effect={0}
             cardName={"Demo card"}
             cardImage={""}
@@ -157,9 +173,9 @@ function App() {
             id={"OpponentsCard3"}
           />
           <Card
-            cardLife={4}
-            cardAttack={2}
-            enemyAttack={myAttack}
+            cardLife={opponentsCard4.life}
+            cardAttack={opponentsCard4.attack}
+            enemyAttack={opponentsAttack}
             effect={0}
             cardName={"Demo card"}
             cardImage={""}
@@ -167,9 +183,9 @@ function App() {
             id={"OpponentsCard4"}
           />
           <Card
-            cardLife={2}
-            cardAttack={1}
-            enemyAttack={myAttack}
+            cardLife={opponentsCard5.life}
+            cardAttack={opponentsCard5.attack}
+            enemyAttack={opponentsAttack}
             effect={0}
             cardName={"Demo card"}
             cardImage={""}
@@ -183,9 +199,7 @@ function App() {
             <div className='MyCardsOnTable'></div>
           </div>
           <div className='ScoreArea'>
-            <div className='Score'>
-              Score
-            </div>
+
             <div className='OpponentsScore'>
               {opponentsScore}
             </div>
@@ -206,8 +220,8 @@ function App() {
             id={"MyCard1"}
           />
           <Card
-            cardLife={myCard1.life}
-            cardAttack={myCard1.attack}
+            cardLife={myCard2.life}
+            cardAttack={myCard2.attack}
             enemyAttack={opponentsAttack}
             effect={0}
             cardName={"Demo card"}
