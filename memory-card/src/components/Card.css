@@ -7,7 +7,7 @@
   border-radius: 1vh;
   display: flex;
   flex-direction: column;
-  margin: 1em;
+  margin: 0.3em;
   font-size: 0.4em;
 }
   .CardProperties
@@ -24,7 +24,7 @@
   .CardMask
   {
     width: 50px;
-    height: 100px;
+    height: 80px;
     border-radius: 1vh;
-    /* transform:translateY(-100px); */
+    transform:translateY(-47px);
   }

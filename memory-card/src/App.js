@@ -70,7 +70,10 @@ function App() {
           const getMyLife = e.target.parentNode.firstChild.children[0].textContent.split('')[4];
           const parent = e.target.parentNode.parentNode.className;
           console.log(`Card's parent: ${parent}`);
-          const myNewLife = getMyLife - getOpponentsAttack;
+          let myNewLife = getMyLife - getOpponentsAttack;
+          if (myNewLife < 0) {
+            myNewLife = 0;
+          }
           if (parent === "MyCards") {
             setCardNum(prevState => ({
               ...prevState,
@@ -83,7 +86,10 @@ function App() {
 
 
           function setOpponentsCard(setCardNr) {
-            const opponentsNewLife = getOpponentsLife - myAttack;
+            let opponentsNewLife = getOpponentsLife - myAttack;
+            if (opponentsNewLife < 0) {
+              opponentsNewLife = 0;
+            }
             setCardNr(prev => ({
               ...prev,
               life: opponentsNewLife
@@ -115,7 +121,7 @@ function App() {
     };
 
     function checkForCards() {
-      const myCards = document.getElementsByClassName("MyCards")[0].children;
+      let myCards = document.getElementsByClassName("MyCards")[0].children;
       if (myCards.length === 1) {
         if (myScore > opponentsScore) {
           setWinner("Ducks win!");

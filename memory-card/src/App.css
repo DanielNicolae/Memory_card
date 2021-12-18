@@ -54,7 +54,10 @@ html
     }
       .CardsOnTable
       {
-
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 1em 0;
       }
         .OpponentsCardsOnTable, .MyCardsOnTable
         {
@@ -67,8 +70,8 @@ html
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        margin: 30px 10px;
-        padding: 10px;
+        margin: 30px 5px;
+        padding: 5px;
       }
     
       
