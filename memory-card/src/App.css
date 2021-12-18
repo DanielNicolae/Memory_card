@@ -48,6 +48,7 @@ html
                   inset 7px 7px 6px rgba(255, 255, 255, 0.2),
                   inset -7px -7px 6px rgba(0, 0, 0, 0.2);
       height: 50vh;
+      width: 98vw;
       display: flex;
       flex-direction: row;
       justify-content: space-between;

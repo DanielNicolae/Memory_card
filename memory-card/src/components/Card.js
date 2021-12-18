@@ -4,22 +4,18 @@ import "./Card.css";
 export default function Card(props) {
 
   return (
-    <div className="CardContainer">
-      <div className="CardProperties">
-        <div className="CardsLife">
-          <div>Life</div>
+    <div className={`CardContainer ${props.id}`}>
+      <div className={`CardProperties ${props.id}`}>
+        <div className={`CardsLife ${props.id}`}>
+          <div className={`Life ${props.id}`}>Life</div>
           {props.cardLife}
         </div>
-        <div className="CardsAttack">
-          <div>Attack</div>
+        <div className={`CardsAttack ${props.id}`}>
+          <div className={`Attack ${props.id}`}>Attack</div>
           {props.cardAttack}
         </div>
       </div>
-      <div className="CardName">
-        {props.cardName}
-      </div>
-      <img src={props.cardImage} alt={props.imageDesc} />
-      <div className={`CardMask ${props.id}`}></div>
+      <img className={`Image ${props.id}`} src={props.cardImage} alt={props.imageDesc} />
     </div>
   );
 }
