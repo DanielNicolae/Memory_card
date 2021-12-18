@@ -290,11 +290,11 @@ function App() {
 
   return (
     <React.Fragment>
-      <header>
-        <div className='Winner'>
-          {winner}
-        </div>
-      </header>
+
+      <div className='Winner'>
+        {winner}
+      </div>
+
       <main>
         <div className='OpponentsCards'>
           <Card
@@ -406,9 +406,7 @@ function App() {
         </div>
 
       </main>
-      <footer>
 
-      </footer>
     </React.Fragment>
   );
 }

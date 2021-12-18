@@ -16,7 +16,7 @@ html
 }
 
 
-  header
+  .Winner
   {
     display: flex;
     justify-content: center;
@@ -24,11 +24,6 @@ html
     margin: 1em;
     font-size: 2em;
   }
-    .Title
-    {
-      font-size: 3em;
-      margin: 1em;
-    }
   main
   {
     display: flex;
@@ -78,11 +73,7 @@ html
         margin: 10px 5px;
         padding: 5px;
       } 
-  footer{
-    display: flex;
-    justify-content: center;
-    text-align: center;
-  }
+  
 
   @media screen and (min-width: 700px)
   {
