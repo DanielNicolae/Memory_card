@@ -9,11 +9,6 @@
   margin: 0.3em;
   font-size: 0.4em;
 }
-.CardContainer:hover
-{
-  transform: translateY(-20px);
-  box-shadow: 2px 2px 2px black;
-}
   .CardProperties
   {
     display: flex;
@@ -172,11 +167,6 @@
     width: 120px;
     height: 165px;
     font-size: 1em;
-  }
-  .CardContainer:hover
-  {
-    transform: translateY(-20px);
-    box-shadow: 5px 5px 5px black;
   }
     .CardProperties
     {

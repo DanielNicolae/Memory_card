@@ -358,7 +358,7 @@ function App() {
           </div>
         </div>
         <div className='MyCards'>
-          <Card
+          <Card className="MyCard"
             cardLife={myCard1.life}
             cardAttack={myCard1.attack}
             enemyAttack={opponentsAttack}
@@ -367,7 +367,7 @@ function App() {
             imageDesc={"Picture of duck 1"}
             id={"MyCard1"}
           />
-          <Card
+          <Card className="MyCard"
             cardLife={myCard2.life}
             cardAttack={myCard2.attack}
             enemyAttack={opponentsAttack}
@@ -376,7 +376,7 @@ function App() {
             imageDesc={"Picture of duck 2"}
             id={"MyCard2"}
           />
-          <Card
+          <Card className="MyCard"
             cardLife={myCard3.life}
             cardAttack={myCard3.attack}
             enemyAttack={opponentsAttack}
@@ -385,7 +385,7 @@ function App() {
             imageDesc={"Picture of duck 3"}
             id={"MyCard3"}
           />
-          <Card
+          <Card className="MyCard"
             cardLife={myCard4.life}
             cardAttack={myCard4.attack}
             enemyAttack={opponentsAttack}
@@ -394,7 +394,7 @@ function App() {
             imageDesc={"Picture of duck 4"}
             id={"MyCard4"}
           />
-          <Card
+          <Card className="MyCard"
             cardLife={myCard5.life}
             cardAttack={myCard5.attack}
             enemyAttack={opponentsAttack}

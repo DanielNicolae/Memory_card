@@ -37,6 +37,11 @@ html
       flex-direction: row;
       justify-content: center;
     }
+      .MyCards .CardContainer:hover
+      {
+        transform: translateY(-20px);
+        box-shadow: 2px 2px 2px black;
+      }
     .Table
     {
       border-radius: 2vh;
@@ -80,6 +85,14 @@ html
     .Table
     {
       width: 95vw;
+    }
+  }
+  @media screen and (min-width: 730px)
+  {
+    .MyCards.CardContainer:hover
+    {
+      transform: translateY(-20px);
+      box-shadow: 5px 5px 5px black;
     }
   }
   @media screen and (min-width: 800px)
