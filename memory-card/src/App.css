@@ -22,7 +22,7 @@ html
     justify-content: center;
     text-align: center;
     margin: 1em;
-    font-size: 2em;
+    font-size: 5vh;
   }
   main
   {
@@ -79,7 +79,6 @@ html
         padding: 5px;
       } 
   
-
   @media screen and (min-width: 700px)
   {
     .Table
@@ -136,13 +135,10 @@ html
     {
       width: 80vw;
     }
-  }
-  @media screen and (min-width: 1200px)
-  {
-    .Table
-    {
-      width: 80vw;
-    }
+      .ScoreArea
+      {
+        font-size: 1.4em;
+      }
   }
   @media screen and (min-width: 1250px)
   {
@@ -185,6 +181,10 @@ html
     {
       width: 65vw;
     }
+      .ScoreArea
+      {
+        font-size: 1.6em;
+      }
   }
   @media screen and (min-width: 1530px)
   {
@@ -213,4 +213,54 @@ html
     {
       width: 50vw;
     }
+      .ScoreArea
+      {
+        font-size: 1.7em;
+      }
+  }
+  @media screen and (min-width: 2000px)
+  {
+      .ScoreArea
+      {
+        font-size: 1.8em;
+      }
+  }
+  @media screen and (min-width: 2200px)
+  {
+      .ScoreArea
+      {
+        font-size: 2em;
+      }
+  }
+  @media screen and (min-width: 2400px)
+  {
+      .ScoreArea
+      {
+        font-size: 2.1em;
+      }
+  }
+  @media screen and (min-width: 2600px)
+  {
+      .ScoreArea
+      {
+        font-size: 2.6em;
+      }
+  }
+  @media screen and (min-width: 2800px)
+  {
+    .Table
+    {
+      width: 55vw;
+    }
+      .ScoreArea
+      {
+        font-size: 2.8em;
+      }
+  }
+  @media screen and (min-width: 3000px)
+  {
+      .ScoreArea
+      {
+        font-size: 3em;
+      }
   }

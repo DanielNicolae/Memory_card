@@ -1,7 +1,7 @@
 .CardContainer
 {
-  width: 50px;
-  height: 80px;
+  width: 45px;
+  height: 70px;
   background: linear-gradient( rgb(255, 186, 117), rgb(122, 73, 0));
   border-radius: 1vh;
   display: flex;
@@ -13,7 +13,7 @@
   {
     display: flex;
     flex-direction: row;
-    width: 50px;
+    width: 45px;
     justify-content: space-between;
   }
     .CardsLife, .CardsAttack
@@ -22,20 +22,38 @@
     }
   .Image
   {
-    width: 48px;
-    height: 55px;
-    object-fit:cover;
+    width: 43px;
+    height: 45px;
+    object-fit: fill;
     border-radius:1vh;
     align-self: center;
   }
-  
+
+  @media screen and (min-width: 320px)
+  {
+    .CardContainer
+    {
+      width: 50px;
+      height: 80px;
+    }
+      .CardProperties
+      {
+        width: 50px;
+        height: 80px;
+      }
+      .Image
+      {
+        width: 48px;
+        height: 40px;
+      }
+  }
 @media screen and (min-width: 360px)
 {
   .CardContainer
   {
     width: 60px;
     height: 90px;
-    font-size: 0.6em;
+    font-size: 0.5em;
   }
     .CardProperties
     {
@@ -64,7 +82,7 @@
     .Image
     {
       width: 58px;
-      height: 55px;
+      height: 50px;
     }
 }
 @media screen and (min-width: 415px)
@@ -82,7 +100,7 @@
     .Image
     {
       width: 68px;
-      height: 60px;
+      height: 55px;
     }
 }
 @media screen and (min-width: 490px)
@@ -100,29 +118,29 @@
     .Image
     {
       width: 78px;
-      height: 75px;
+      height: 60px;
     }
 }
-@media screen and (min-width: 530px)
-{
+@media screen and (min-width: 1100px)
+{ 
   .CardContainer
   {
-    width: 90px;
-    height: 120px;
+    width: 80px;
+    height: 110px;
     font-size: 0.7em;
   }
     .CardProperties
     {
-      width: 90px;
-      height: 120px;
+      width: 80px;
+      height: 110px;
     }
     .Image
     {
-      width: 88px;
-      height: 80px;
+      width: 78px;
+      height: 70px;
     }
 }
-@media screen and (min-width: 600px)
+@media screen and (min-width: 1300px)
 {
   .CardContainer
   {
@@ -141,13 +159,13 @@
       height: 90px;
     }
 }
-@media screen and (min-width: 640px)
+@media screen and (min-width: 1400px)
 {
   .CardContainer
   {
     width: 110px;
     height: 150px;
-
+    font-size: 1em;
   }
     .CardProperties
     {
@@ -157,43 +175,137 @@
     .Image
     {
       width: 108px;
-      height: 110px;
+      height: 100px;
     }
 }
-@media screen and (min-width: 730px)
-{ 
+@media screen and (min-width: 1600px)
+{
   .CardContainer
   {
     width: 120px;
-    height: 165px;
-    font-size: 1em;
+    height: 160px;
   }
     .CardProperties
     {
       width: 120px;
-      height: 165px;
+      height: 160px;
     }
     .Image
     {
       width: 118px;
-      height: 130px;
+      height: 110px;
     }
 }
-@media screen and (min-width: 800px)
-{ 
+@media screen and (min-width: 1800px)
+{
   .CardContainer
   {
     width: 130px;
-    height: 190px;
+    height: 170px;
+    font-size: 1.2em;
   }
     .CardProperties
     {
       width: 130px;
-      height: 190px;
+      height: 170px;
     }
     .Image
     {
       width: 128px;
-      height: 140px;
+      height: 110px;
+    }
+}
+@media screen and (min-width: 2000px)
+{
+  .CardContainer
+  {
+    width: 140px;
+    height: 180px;
+    font-size: 1.4em;
+  }
+    .CardProperties
+    {
+      width: 140px;
+      height: 180px;
+    }
+    .Image
+    {
+      width: 138px;
+      height: 110px;
+    }
+}
+@media screen and (min-width: 2200px)
+{
+  .CardContainer
+  {
+    width: 170px;
+    height: 210px;
+    font-size: 1.5em;
+  }
+    .CardProperties
+    {
+      width: 170px;
+      height: 210px;
+    }
+    .Image
+    {
+      width: 168px;
+      height: 130px;
+    }
+}
+@media screen and (min-width: 2400px)
+{
+  .CardContainer
+  {
+    width: 200px;
+    height: 240px;
+    font-size: 1.8em;
+  }
+    .CardProperties
+    {
+      width: 200px;
+      height: 240px;
+    }
+    .Image
+    {
+      width: 198px;
+      height: 160px;
+    }
+}
+@media screen and (min-width: 2800px)
+{
+  .CardContainer
+  {
+    width: 260px;
+    height: 300px;
+    font-size: 2em;
+  }
+    .CardProperties
+    {
+      width: 260px;
+      height: 300px;
+    }
+    .Image
+    {
+      width: 258px;
+      height: 200px;
+    }
+}
+@media screen and (min-width: 3000px)
+{
+  .CardContainer
+  {
+    width: 270px;
+    height: 310px;
+  }
+    .CardProperties
+    {
+      width: 270px;
+      height: 310px;
+    }
+    .Image
+    {
+      width: 268px;
+      height: 210px;
     }
 }
