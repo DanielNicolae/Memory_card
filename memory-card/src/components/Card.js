@@ -15,7 +15,7 @@ export default function Card(props) {
           {props.cardAttack}
         </div>
       </div>
-      <img className={`Image ${props.id}`} src={props.cardImage} alt={props.imageDesc} />
+      <img className={`Image ${props.id}`} src={props.cardImage} alt={props.imageDesc} width={"512"} height={"512"} />
     </div>
   );
 }

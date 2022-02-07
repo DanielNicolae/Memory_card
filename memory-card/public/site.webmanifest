@@ -1,0 +1,23 @@
+{
+  "name": "Create React App Sample",
+  "short_name": "React App",
+  "start_url": "/",
+  "description": "This is a card game. Each card has a live and an attack. You attack the opponent by selecting a card from your deck; a random card from the opponent's deck will be selected and placed on the table. The two card will attack each other. The attack value from your card will be subtracted from the life of the opponent's card and vice versa. The sum of the lives of all cards on the table, on each player's side, determins the winner.",
+  "theme_color": "#000000",
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "gradient_512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}
