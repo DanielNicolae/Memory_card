@@ -8,13 +8,13 @@
   "display": "standalone",
   "icons": [
     {
-      "src": "512x512.png",
+      "src": "/512x512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "gradient_512x512.png",
+      "src": "/gradient_512x512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "maskable"
