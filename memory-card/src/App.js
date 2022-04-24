@@ -54,17 +54,27 @@ function App() {
     const opponentsTable = document.getElementsByClassName("OpponentsCardsOnTable")[0];
 
     function insertCardOnTable(e) {
+      let getOpponentsLife = 0;
+      let getOpponentsAttack = 0;
+      let randomCardNum = 0;
+      let getOpponentsCardClassId = "";
       const nameOfClass = e.target.className;
       console.log(`nameOfClass: ${nameOfClass}`);
+      let opponentsCards = document.getElementsByClassName("OpponentsCards")[0].children;
       if (e.target.parentNode.parentNode !== null) {
         if (e.target.parentNode.parentNode.className === "MyCards") {
-          const opponentsCards = document.getElementsByClassName("OpponentsCards")[0].children;
-          const randomCardNum = Math.floor(Math.random() * opponentsCards.length);
-          const getOpponentsAttack = opponentsCards[randomCardNum].parentNode.firstChild.firstChild.children[1].textContent.split('')[6];
+
+          randomCardNum = Math.floor(Math.random() * opponentsCards.length);
+          console.log(`randomCardNum = ${randomCardNum}`);
+          console.log(`opponentsCards`);
+          console.log(opponentsCards);
+          console.log(opponentsCards[randomCardNum]);
+          console.log(opponentsCards[randomCardNum].firstChild.lastChild.textContent.split('')[6]);
+          getOpponentsAttack = Number(opponentsCards[randomCardNum].firstChild.lastChild.textContent.split('')[6]);
           setOpponentsAttack(getOpponentsAttack);
-          // console.log(`OpponentsAttack=${getOpponentsAttack}`);
-          const getOpponentsLife = opponentsCards[randomCardNum].parentNode.firstChild.firstChild.children[0].textContent.split('')[4];
-          const getOpponentsCardClassId = opponentsCards[randomCardNum].lastChild.className;
+          console.log(`OpponentsAttack = ${getOpponentsAttack}`);
+          getOpponentsLife = opponentsCards[randomCardNum].parentNode.firstChild.firstChild.children[0].textContent.split('')[4];
+          getOpponentsCardClassId = opponentsCards[randomCardNum].lastChild.className;
           console.log(`getOpponentsCardClassId ${getOpponentsCardClassId}`);
           function setCard(cardClass1, cardClass2, cardClass3, cardClass4, cardClass5, cardClass6, cardClass7, setCardNum) {
             setRound(round => round + 1);
